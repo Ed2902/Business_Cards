@@ -1,0 +1,21 @@
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fondo general con gradiente arena y padding sutil en bordes */
+html, body, #root { height: 100%; }
+body {
+  background: var(--gw-grad-sand);
+  color: var(--gw-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 10px; /* aire alrededor de la card para que no pegue bordes */
+}
+
+/* Reset links */
+a { text-decoration: none; color: inherit; }
+
+/* Focus accesible */
+:focus-visible { outline: none; box-shadow: var(--focus-neon); border-radius: 12px; }

@@ -1,0 +1,189 @@
+/* ===== CARD ===== */
+.gw-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--gw-shadow);
+  background: #fff;
+}
+
+/* ===== HERO ===== */
+.wave-wrap {
+  position: relative;
+  z-index: 2;
+  height: min(44vh, 340px);
+  min-height: 260px;
+  background: var(--gw-grad-brand-135);
+  overflow: hidden;
+}
+
+/* Logo */
+.gw-logo-badge {
+  position: absolute;
+  left: 50%;
+  top: 36px;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  z-index: 7;
+}
+.gw-logo-img {
+  width: 106px;
+  height: 106px;
+  object-fit: contain;
+}
+
+/* ===== OLAS ANIMADAS CON SVG ===== */
+.wave-svg-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  z-index: 5;
+}
+.wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.wave-path {
+  transition: d 0.3s ease;
+}
+.wave-path--green {
+  fill: #22c55e;
+  opacity: 0.6;
+}
+.wave-path--orange {
+  fill: #f97316;
+  opacity: 0.7;
+}
+.wave-path--blue {
+  fill: #3b82f6;
+  opacity: 0.8;
+}
+.wave-path--dark {
+  fill: #0d2e39;
+  opacity: 1;
+}
+
+/* ===== BLOQUE OSCURO ===== */
+.gw-body-band--dark {
+  position: relative;
+  z-index: 1;
+  background: #0d2e39;
+  color: #fff;
+  margin-top: -40px; /* une mejor con las olas */
+  padding: 48px 22px 40px;
+}
+
+/* ===== PILLS ===== */
+.pills-wrap {
+  width: 100%;
+  max-width: 230px;
+  margin: 24px auto 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pill {
+  width: 100%;
+  height: 50px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(2px);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+.pill__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.pill__label {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 13px;
+}
+.pill--wa {
+  background: linear-gradient(90deg, #20c65d, #25d366);
+}
+.pill--mail {
+  background: linear-gradient(90deg, #1c6ea4, #2d86c0);
+}
+.pill--phone {
+  background: linear-gradient(90deg, #36bff0, #59ccf4);
+}
+
+/* ===== CONTACTO + REDES ===== */
+.contact-card {
+  background: #fff;
+
+  padding: 12px 16px;
+}
+section.bg-white {
+  padding-top: 8px !important;
+}
+
+.socials-wrap {
+  width: 100%;
+  max-width: 340px;
+  margin: -4px auto 0;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.social {
+  margin-bottom: 10%;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s;
+}
+.social:hover {
+  transform: translateY(-2px);
+  margin-bottom: 100%;
+}
+.social--web {
+  background: #0f172a;
+}
+.social--fb {
+  background: #1877f2;
+}
+.social--ln {
+  background: #0a66c2;
+}
+.social--ig {
+  background: radial-gradient(
+      100% 100% at 70% 10%,
+      #ffd600 0%,
+      rgba(255, 214, 0, 0) 30%
+    ),
+    linear-gradient(135deg, #f58529 10%, #dd2a7b 45%, #8134af 70%, #515bd4 100%);
+}

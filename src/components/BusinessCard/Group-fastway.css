@@ -1,0 +1,407 @@
+:root {
+  /* Paleta Fastway */
+  --fw-primary: #f74c1b; /* naranja principal */
+  --fw-secondary: #59a1f7; /* azul medio */
+  --fw-secondary-soft: #67e1ff; /* celeste */
+  --fw-accent-green: #00ba59; /* verde acento */
+
+  /* Paleta Group */
+  --group-primary: #004b8d; /* azul profundo */
+  --group-accent: #00a88a; /* verde/turquesa */
+
+  /* Base */
+  --fw-bg: #ffffff;
+  --fw-border: #e5e7eb;
+  --fw-text-main: #111827;
+  --fw-text-muted: #6b7280;
+}
+
+/* CARD GENERAL */
+.fw-card {
+  position: relative;
+  border-radius: 26px;
+  background: var(--fw-bg);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+  overflow: hidden;
+  border: 1px solid var(--fw-border);
+}
+
+.fw-card--group {
+  background: #ffffff;
+}
+
+/* HERO SUPERIOR */
+.fw-hero {
+  position: relative;
+  padding: 44px 24px 80px; /* avatar + logo más abajo */
+  overflow: hidden;
+  background: radial-gradient(
+      circle at top left,
+      rgba(103, 225, 255, 0.6),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(0, 168, 138, 0.55),
+      transparent 55%
+    );
+}
+
+/* Fondo animado con degradado naranja + azul + verde notorio */
+.fw-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(247, 76, 27, 0.35),
+    /* naranja */ rgba(89, 161, 247, 0.4),
+    /* azul */ rgba(0, 168, 138, 0.55) /* verde/turquesa */
+  );
+  background-size: 260% 260%;
+  animation: fw-bg-shift 16s ease-in-out infinite alternate;
+  opacity: 0.9;
+}
+
+/* órbitas decorativas */
+.fw-hero-orbit {
+  position: absolute;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  mix-blend-mode: screen;
+}
+
+.fw-hero-orbit--outer {
+  width: 240px;
+  height: 240px;
+  top: -50px;
+  right: -70px;
+  animation: fw-orbit-rotate 22s linear infinite;
+}
+
+.fw-hero-orbit--inner {
+  width: 170px;
+  height: 170px;
+  top: -20px;
+  left: -50px;
+  animation: fw-orbit-rotate 18s linear infinite reverse;
+}
+
+.fw-hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 1;
+}
+
+/* Avatar persona */
+.fw-avatar-wrap {
+  margin-bottom: -30px;
+  width: 128px;
+  height: 128px;
+  border-radius: 999px;
+  padding: 4px;
+  background: linear-gradient(
+    135deg,
+    var(--fw-primary),
+    var(--fw-secondary),
+    var(--group-accent)
+  );
+  display: grid;
+  place-items: center;
+  animation: fw-float 7s ease-in-out infinite;
+}
+
+.fw-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+/* Logo principal en medio, más abajo */
+.fw-logo-main-wrap {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: fw-pulse 8s ease-in-out infinite;
+}
+
+.fw-logo-main {
+  max-height: 70px;
+  max-width: 260px;
+  object-fit: contain;
+}
+
+/* CUERPO DE LA TARJETA */
+.fw-body {
+  padding: 14px 22px 18px;
+}
+
+.fw-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.fw-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--fw-text-main);
+  letter-spacing: 0.01em;
+}
+
+.fw-role {
+  font-size: 0.9rem;
+  color: var(--fw-text-muted);
+  margin-top: 2px;
+}
+
+.fw-company {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  font-weight: 500;
+  color: var(--group-primary);
+}
+
+.fw-about {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--fw-text-muted);
+  text-align: center;
+}
+
+/* CTA PRINCIPAL: botón WhatsApp al centro */
+.fw-main-cta {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.fw-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, background-color 0.15s ease;
+  text-decoration: none;
+}
+
+.fw-pill svg {
+  flex-shrink: 0;
+}
+
+/* WhatsApp principal bien llamativo */
+.fw-pill--whatsapp.fw-pill--main {
+  background: linear-gradient(135deg, #25d366, var(--fw-accent-green));
+  color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 186, 89, 0.35);
+}
+
+.fw-pill--whatsapp.fw-pill--main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 186, 89, 0.45);
+}
+
+/* FOOTER: redes + apoyo + contacto */
+.fw-footer {
+  border-top: 1px solid rgba(229, 231, 235, 0.9);
+  padding: 10px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Redes sociales */
+.fw-social-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fw-social {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #f3f4f6;
+  color: var(--fw-text-main);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.fw-social--fb {
+  color: #1877f2;
+}
+
+.fw-social--ig {
+  color: #e1306c;
+}
+
+.fw-social--ln {
+  color: #0a66c2;
+}
+
+.fw-social:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2);
+  background-color: #ffffff;
+}
+
+/* Con apoyo de */
+.fw-support {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(209, 213, 219, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.fw-support-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fw-text-muted);
+}
+
+.fw-support-logos {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fw-support-logo-wrap {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(209, 213, 219, 0.9);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  cursor: pointer;
+}
+
+.fw-support-logo {
+  max-height: 38px; /* aumenta altura */
+  max-width: 140px; /* aumenta ancho */
+  object-fit: contain;
+}
+/* CONTACTO (abajo de Con apoyo de, a la izquierda) */
+.fw-contact-section--footer {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.fw-contact-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--fw-text-main);
+}
+
+.fw-contact-details--left {
+  font-size: 0.86rem;
+  color: var(--fw-text-muted);
+  text-align: left;
+}
+
+.fw-contact-line + .fw-contact-line {
+  margin-top: 2px;
+}
+
+/* ANIMACIONES */
+@keyframes fw-bg-shift {
+  0% {
+    background-position: 0% 0%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 50% 100%;
+    transform: scale(1.02);
+  }
+  100% {
+    background-position: 100% 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes fw-orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fw-float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fw-pulse {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.24);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.18);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .fw-card {
+    border-radius: 22px;
+  }
+
+  .fw-hero {
+    padding: 38px 18px 72px;
+  }
+
+  .fw-avatar-wrap {
+    width: 112px;
+    height: 112px;
+  }
+
+  .fw-name {
+    font-size: 1.1rem;
+  }
+
+  .fw-pill {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .fw-support-logo {
+    max-height: 60px;
+    max-width: 225px;
+  }
+}

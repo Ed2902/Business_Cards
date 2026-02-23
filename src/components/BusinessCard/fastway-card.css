@@ -1,0 +1,285 @@
+:root {
+  /* Paleta Fastway */
+  --fw-primary: #f74c1b; /* naranja principal */
+  --fw-bg: #ffffff; /* fondo */
+  --fw-secondary: #59a1f7; /* azul */
+  --fw-secondary-soft: #67e1ff; /* celeste */
+  --fw-accent-green: #00ba59; /* verde */
+  --fw-border: #e5e7eb;
+  --fw-text-main: #111827;
+  --fw-text-muted: #6b7280;
+}
+
+/* CARD */
+.fw-card {
+  position: relative;
+  border-radius: 26px;
+  background: var(--fw-bg);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+  overflow: hidden;
+  border: 1px solid var(--fw-border);
+}
+
+/* HEADER */
+.fw-header {
+  position: relative;
+  padding: 18px 22px 12px;
+  background: radial-gradient(circle at top left, #ffe3d8 0, #ffffff 45%);
+}
+
+.fw-header-bar {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--fw-primary), var(--fw-secondary));
+}
+
+.fw-header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.fw-logo-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 2px solid rgba(247, 76, 27, 0.25);
+  box-shadow: 0 10px 24px rgba(247, 76, 27, 0.3);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.fw-logo-img {
+  width: 94%;
+  height: 94%;
+  object-fit: contain;
+}
+
+.fw-person {
+  min-width: 0;
+}
+
+.fw-name {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--fw-text-main);
+}
+
+.fw-title {
+  margin-top: 2px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fw-primary);
+  font-weight: 700;
+}
+
+.fw-company {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--fw-text-muted);
+}
+
+/* BODY */
+.fw-body {
+  padding: 14px 20px 10px;
+}
+
+.fw-about {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--fw-text-main);
+  background: #fff5f0;
+  border-radius: 18px;
+  padding: 10px 12px;
+  border: 1px dashed rgba(247, 76, 27, 0.4);
+}
+
+/* ========================================================= */
+/* ======================= CONTACT PILLS ==================== */
+/* ========================================================= */
+
+.fw-contact-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Fila de botones */
+.fw-contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fw-contact-row--center {
+  justify-content: center;
+}
+
+/* Botones (pills) */
+.fw-pill {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    background-color 0.16s ease, border-color 0.16s ease;
+  max-width: 180px; /* seguridad extra */
+}
+
+/* Iconos */
+.fw-pill-icon {
+  display: grid;
+  place-items: center;
+}
+
+.fw-pill-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Variantes */
+.fw-pill--wa {
+  background: linear-gradient(90deg, var(--fw-accent-green), #20d56f);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 186, 89, 0.35);
+}
+
+.fw-pill--mail {
+  background: #ffffff;
+  color: var(--fw-text-main);
+  border-color: rgba(89, 161, 247, 0.7);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+}
+
+.fw-pill--phone {
+  background: var(--fw-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(247, 76, 27, 0.4);
+}
+
+.fw-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
+}
+
+/* CONTACT INLINE */
+.fw-contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--fw-text-muted);
+}
+
+.fw-contact-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.fw-contact-dot::before {
+  content: '•';
+  margin: 0 6px 0 2px;
+  color: var(--fw-primary);
+}
+
+/* FOOTER / REDES */
+.fw-footer {
+  margin-top: 6px;
+  padding: 8px 18px 14px;
+  border-top: 1px dashed var(--fw-border);
+  background: linear-gradient(180deg, #f3fffa 0, #ffffff 85%);
+}
+
+.fw-footer-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--fw-text-muted);
+  margin-bottom: 6px;
+}
+
+.fw-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fw-social {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  text-decoration: none;
+  transition: 0.16s ease;
+  color: var(--fw-text-main);
+}
+
+/* Variantes redes */
+.fw-social--web {
+  border-color: var(--fw-secondary);
+}
+
+.fw-social--fb {
+  border-color: #1877f2;
+}
+
+.fw-social--ig {
+  border-color: #e1306c;
+}
+
+.fw-social--ln {
+  border-color: #0077b5;
+}
+
+.fw-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+  background: #fef2ec;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .fw-header {
+    padding-inline: 14px;
+  }
+
+  .fw-header-content {
+    gap: 12px;
+  }
+
+  .fw-name {
+    font-size: 1.1rem;
+  }
+
+  /* En móvil también se mantienen como pills, no barra completa */
+  .fw-contact-row {
+    justify-content: center;
+  }
+
+  .fw-pill {
+    font-size: 0.76rem;
+    padding: 7px 14px;
+  }
+}

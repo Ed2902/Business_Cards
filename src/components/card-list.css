@@ -1,0 +1,76 @@
+/* === LISTA GENERAL === */
+.card-list {
+  padding: 1.2rem;
+  max-width: 440px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* === ITEM CLICKABLE === */
+.card-item {
+  text-decoration: none;
+  display: block;
+  transform: translateZ(0);
+}
+
+.card-item:hover .preview {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* === CARD PREVIEW BASE === */
+.preview {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.22s ease;
+}
+
+/* HEADER PREVIEW */
+.preview-header {
+  height: 110px;
+}
+
+/* BODY PREVIEW */
+.preview-body {
+  padding: 1rem 1.2rem;
+}
+
+.preview-body h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.preview-body p {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ========================================================= */
+/* ====================== THEMES =========================== */
+/* ========================================================= */
+
+/* === GREENWAY === */
+.preview.greenway .preview-header {
+  background: linear-gradient(135deg, #0b3d6e, #1e73b6);
+}
+
+.preview.greenway {
+  border-color: rgba(30, 115, 182, 0.4);
+}
+
+/* === FASTWAY === */
+.preview.fastway .preview-header {
+  /* solo naranja → azul (sin puntas moradas) */
+  background: linear-gradient(90deg, #f74c1b, #59a1f7);
+}
+
+.preview.fastway {
+  border-color: rgba(247, 76, 27, 0.4);
+}

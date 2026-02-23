@@ -1,0 +1,62 @@
+:root {
+  /* Tipografía y legibilidad */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Paleta base — FORZADO MODO CLARO */
+  color-scheme: light;
+  --color-primary: #16a34a;
+  --color-primary-light: #22c55e;
+  --color-accent: #10b981;
+  --color-dark: #0f172a;
+  --color-light: #f9fafb;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-bg: #ffffff;
+  --color-overlay: rgba(0, 0, 0, 0.08);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-highlight: #facc15;
+
+  /* Tokens Green Way */
+  --gw-green: #22b573;
+  --gw-blue: #1c6ea4;
+  --gw-ink: #0f172a;
+  --gw-sand: #f5f5ef;
+  --gw-white: #ffffff;
+  --gw-radius: 16px;
+  --gw-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --gw-nav-h: 86px;
+
+  /* Gradientes */
+  --gw-grad-brand-90: linear-gradient(90deg, var(--gw-green), var(--gw-blue));
+  --gw-grad-brand-135: linear-gradient(135deg, var(--gw-green), var(--gw-blue));
+  --gw-grad-text: linear-gradient(90deg, var(--gw-green) 0%, var(--gw-blue) 100%);
+  --gw-grad-overlay-v: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 55%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  --gw-grad-sand: linear-gradient(180deg, #f7f7f2 0%, #ffffff 100%);
+
+  color: var(--color-text);
+  background-color: var(--color-bg);
+
+  /* Derivados para efectos */
+  --glass-bg: rgba(255,255,255,0.6);
+  --glass-border: rgba(255,255,255,0.5);
+  --focus-neon: 0 0 0 3px rgba(34,181,115,.35), 0 0 0 6px rgba(28,110,164,.25);
+}
+
+/* helpers */
+.gw-text-gradient {
+  background: var(--gw-grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
