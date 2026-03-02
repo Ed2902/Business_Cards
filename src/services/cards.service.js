@@ -273,7 +273,7 @@ const cards = [
       'Aseguro la calidad y la eficiencia operativa en cada proceso, coordinando equipos y estandarizando buenas prácticas para ofrecer un servicio confiable, ágil y orientado a la mejora continua.',
     contact: {
       phone: '+57 350 4586346',
-      email: 'caroll@fastwaysas.com',
+      email: 'calidad@fastwaysas.com',
       whatsapp: '+57 350 4586346',
       greeting:
         'Hola Caroll, me gustaría recibir información sobre cómo optimizan la calidad y las operaciones para fortalecer mi empresa.',
