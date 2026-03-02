@@ -252,6 +252,40 @@ const cards = [
     },
   },
 
+  // === GROUP: Caroll Mishel Huertas Rojas ===
+  {
+    slug: 'caroll-huertas-group',
+    person: {
+      name: 'Caroll Mishel Huertas Rojas',
+      title: 'Coordinadora de calidad y operaciones',
+      company: '',
+      avatarUrl: null,
+    },
+    brand: {
+      logoUrl: './Fastway.png',
+      theme: 'group',
+      supportLogos: [
+        { url: './Green.png', href: 'https://www.greenwayinter.com/' },
+        { url: './Harvest.webp', href: 'https://metalharvest.io/' },
+      ],
+    },
+    about:
+      'Aseguro la calidad y la eficiencia operativa en cada proceso, coordinando equipos y estandarizando buenas prácticas para ofrecer un servicio confiable, ágil y orientado a la mejora continua.',
+    contact: {
+      phone: '+57 350 4586346',
+      email: '',
+      whatsapp: '+57 350 4586346',
+      greeting:
+        'Hola Caroll, me gustaría recibir información sobre cómo optimizan la calidad y las operaciones para fortalecer mi empresa.',
+    },
+    socials: {
+      web: 'https://www.fastwaysas.com/',
+      facebook: 'https://www.facebook.com/Fastwaysas/',
+      instagram: 'https://www.instagram.com/fastwaybic/',
+      linkedin: 'https://www.linkedin.com/company/fastway-sas/',
+    },
+  },
+
   // === GROUP: Claudia Morales ===
   {
     slug: 'claudia-morales-group',
