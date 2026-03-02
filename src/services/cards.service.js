@@ -258,8 +258,8 @@ const cards = [
     person: {
       name: 'Caroll Mishel Huertas Rojas',
       title: 'Coordinadora de calidad y operaciones',
-      company: '',
-      avatarUrl: null,
+      company: 'Fastwaysas, BIC',
+      avatarUrl: './Caroll.png',
     },
     brand: {
       logoUrl: './Fastway.png',
@@ -273,7 +273,7 @@ const cards = [
       'Aseguro la calidad y la eficiencia operativa en cada proceso, coordinando equipos y estandarizando buenas prácticas para ofrecer un servicio confiable, ágil y orientado a la mejora continua.',
     contact: {
       phone: '+57 350 4586346',
-      email: '',
+      email: 'caroll@fastwaysas.com',
       whatsapp: '+57 350 4586346',
       greeting:
         'Hola Caroll, me gustaría recibir información sobre cómo optimizan la calidad y las operaciones para fortalecer mi empresa.',
