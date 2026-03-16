@@ -4,6 +4,7 @@ import { getCards, getCardBySlug } from '../services/cards.service'
 import BusinessCard from '../components/BusinessCard/BusinessCard'
 import FastwayCard from '../components/BusinessCard/FastwayCard'
 import GroupFastwayCard from '../components/BusinessCard/Group-FastwayCard'
+import HarvestCard from '../components/BusinessCard/HarvestCard'
 import CardList from '../components/CardList'
 
 export default function CardsPage() {
@@ -16,9 +17,15 @@ export default function CardsPage() {
     const theme = card?.brand?.theme
     const isFastway = theme === 'fastway' || card?.slug === 'fastway'
     const isGroup = theme === 'group'
+    const isHarvest =
+      theme === 'harvest' || card?.slug?.toLowerCase().includes('harvest')
 
     if (isFastway) {
       return <FastwayCard card={card} />
+    }
+
+    if (isHarvest) {
+      return <HarvestCard card={card} />
     }
 
     if (isGroup) {

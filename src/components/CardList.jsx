@@ -21,9 +21,11 @@ export default function CardList({ cards }) {
                 className={
                   theme === 'fastway'
                     ? 'preview fastway'
-                    : theme === 'group'
-                    ? 'preview group'
-                    : 'preview greenway'
+                    : theme === 'harvest'
+                      ? 'preview harvest'
+                      : theme === 'group'
+                        ? 'preview group'
+                        : 'preview greenway'
                 }
               >
                 <div className='preview-header' />

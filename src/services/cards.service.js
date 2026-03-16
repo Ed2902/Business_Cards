@@ -319,6 +319,160 @@ const cards = [
       linkedin: 'https://www.linkedin.com/company/fastway-sas/',
     },
   },
+
+  // === HARVEST: Paola Garzon ===
+  {
+    slug: 'paola-Garzon-harvest',
+    person: {
+      name: 'Paola Garzon',
+      title: 'Directora para América Latina',
+      company: 'Metal Harvest',
+      avatarUrl: './Paola.png',
+    },
+    brand: {
+      logoUrl: './Harvest.webp',
+      theme: 'harvest',
+    },
+    about:
+      'Somos una empresa enfocada en la gestion sostenible de metales industriales, integrando trazabilidad, eficiencia operativa y soluciones responsables para transformar residuos en valor.',
+    contact: {
+      phone: '+57 318 212 3378',
+      email: 'gerencia@metalharvest.io',
+      whatsapp: '+57 318 212 3378',
+      greeting:
+        'Hola Paola, deseo recibir informacion sobre los productos y soluciones de Harvest para mi empresa.',
+    },
+    socials: {
+      web: 'https://metalharvest.io/',
+      facebook:
+        'https://www.facebook.com/people/Green-Metal-Harvest-SAS/61578237220888/',
+      instagram: 'https://www.instagram.com/metal_harvest/',
+      linkedin: 'https://www.linkedin.com/company/metal-harvest/',
+    },
+  },
+
+  // === HARVEST: Karen Julieth Gonzalez Valencia ===
+  {
+    slug: 'karen-gonzalez-harvest',
+    person: {
+      name: 'Karen Julieth Gonzalez Valencia',
+      title: 'Comercial',
+      company: 'Metal Harvest',
+      avatarUrl: './karen.png',
+    },
+    brand: {
+      logoUrl: './Harvest.webp',
+      theme: 'harvest',
+    },
+    about:
+      'Somos una empresa enfocada en la gestion sostenible de metales industriales, integrando trazabilidad, eficiencia operativa y soluciones responsables para transformar residuos en valor.',
+    contact: {
+      phone: '+57 314 300 2760',
+      email: 'comercial@metalharvest.io',
+      whatsapp: '+57 314 300 2760',
+      greeting:
+        'Hola Karen, deseo recibir informacion sobre los productos y soluciones de Harvest para mi empresa.',
+    },
+    socials: {
+      web: 'https://metalharvest.io/',
+      facebook:
+        'https://www.facebook.com/people/Green-Metal-Harvest-SAS/61578237220888/',
+      instagram: 'https://www.instagram.com/metal_harvest/',
+      linkedin: 'https://www.linkedin.com/company/metal-harvest/',
+    },
+  },
+
+  // === HARVEST: Caroll Mishel Huertas Rojas ===
+  {
+    slug: 'caroll-huertas-harvest',
+    person: {
+      name: 'Caroll Mishel Huertas Rojas',
+      title: 'Calidad y Medio Ambiente',
+      company: 'Metal Harvest',
+      avatarUrl: './Caroll.png',
+    },
+    brand: {
+      logoUrl: './Harvest.webp',
+      theme: 'harvest',
+    },
+    about:
+      'Somos una empresa enfocada en la gestion sostenible de metales industriales, integrando trazabilidad, eficiencia operativa y soluciones responsables para transformar residuos en valor.',
+    contact: {
+      phone: '+57 350 4586346',
+      email: 'calidad@metalharvest.io',
+      whatsapp: '+57 350 4586346',
+      greeting:
+        'Hola Caroll, deseo recibir informacion sobre los productos y soluciones de Harvest para mi empresa.',
+    },
+    socials: {
+      web: 'https://metalharvest.io/',
+      facebook:
+        'https://www.facebook.com/people/Green-Metal-Harvest-SAS/61578237220888/',
+      instagram: 'https://www.instagram.com/metal_harvest/',
+      linkedin: 'https://www.linkedin.com/company/metal-harvest/',
+    },
+  },
+
+  // === HARVEST: Claudia Morales ===
+  {
+    slug: 'claudia-morales-harvest',
+    person: {
+      name: 'Claudia Morales',
+      title: 'Ejecutiva Comercial',
+      company: 'Metal Harvest',
+      avatarUrl: './claudia.webp',
+    },
+    brand: {
+      logoUrl: './Harvest.webp',
+      theme: 'harvest',
+    },
+    about:
+      'Somos una empresa enfocada en la gestion sostenible de metales industriales, integrando trazabilidad, eficiencia operativa y soluciones responsables para transformar residuos en valor.',
+    contact: {
+      phone: '+57 310 781 1985',
+      email: 'ejecutivacomercial@metalharvest.io',
+      whatsapp: '+57 310 781 1985',
+      greeting:
+        'Hola Claudia, deseo recibir informacion sobre los productos y soluciones de Harvest para mi empresa.',
+    },
+    socials: {
+      web: 'https://metalharvest.io/',
+      facebook:
+        'https://www.facebook.com/people/Green-Metal-Harvest-SAS/61578237220888/',
+      instagram: 'https://www.instagram.com/metal_harvest/',
+      linkedin: 'https://www.linkedin.com/company/metal-harvest/',
+    },
+  },
+  // === HARVEST: Andres Felipe Barrera Rodriguez ===
+  {
+    slug: 'andres-barrera-harvest',
+    person: {
+      name: 'Andres Felipe Barrera Rodriguez',
+      title: 'Líder de Proyectos',
+      company: 'Metal Harvest',
+      avatarUrl: './AndresBarrera.png',
+    },
+    brand: {
+      logoUrl: './Harvest.webp',
+      theme: 'harvest',
+    },
+    about:
+      'Somos una empresa enfocada en la gestión sostenible de metales industriales, integrando trazabilidad, eficiencia operativa y soluciones responsables para transformar residuos en valor.',
+    contact: {
+      phone: '+573028583784',
+      email: 'proyectos@metalharvest.io',
+      whatsapp: '+573028583784',
+      greeting:
+        'Hola Andrés, deseo recibir información sobre los productos y soluciones de Harvest para mi empresa.',
+    },
+    socials: {
+      web: 'https://metalharvest.io/',
+      facebook:
+        'https://www.facebook.com/people/Green-Metal-Harvest-SAS/61578237220888/',
+      instagram: 'https://www.instagram.com/metal_harvest/',
+      linkedin: 'https://www.linkedin.com/company/metal-harvest/',
+    },
+  },
 ]
 
 export function getCards() {

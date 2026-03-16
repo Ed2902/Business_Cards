@@ -74,3 +74,12 @@
 .preview.fastway {
   border-color: rgba(247, 76, 27, 0.4);
 }
+
+/* === HARVEST === */
+.preview.harvest .preview-header {
+  background: linear-gradient(120deg, #1f3c2b 0%, #385b2a 46%, #c8a65a 100%);
+}
+
+.preview.harvest {
+  border-color: rgba(56, 91, 42, 0.45);
+}
