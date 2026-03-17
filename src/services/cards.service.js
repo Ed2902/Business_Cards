@@ -327,7 +327,7 @@ const cards = [
       name: 'Paola Garzon',
       title: 'Directora para América Latina',
       company: 'Metal Harvest',
-      avatarUrl: './Paola.png',
+      avatarUrl: './paola.webp',
     },
     brand: {
       logoUrl: './Harvest.webp',
@@ -463,7 +463,38 @@ const cards = [
       email: 'proyectos@metalharvest.io',
       whatsapp: '+573028583784',
       greeting:
-        'Hola Andrés, deseo recibir información sobre los productos y soluciones de Harvest para mi empresa.',
+        'Hola Andrés, deseo recibir información sobre las soluciones de Harvest para mi empresa.',
+    },
+    socials: {
+      web: 'https://metalharvest.io/',
+      facebook:
+        'https://www.facebook.com/people/Green-Metal-Harvest-SAS/61578237220888/',
+      instagram: 'https://www.instagram.com/metal_harvest/',
+      linkedin: 'https://www.linkedin.com/company/metal-harvest/',
+    },
+  },
+
+  // === HARVEST: Omar Melo ===
+  {
+    slug: 'omar-melo-harvest',
+    person: {
+      name: 'Omar Melo',
+      title: 'Gerente de Compras',
+      company: 'Metal Harvest',
+      avatarUrl: './omar.webp',
+    },
+    brand: {
+      logoUrl: './Harvest.webp',
+      theme: 'harvest',
+    },
+    about:
+      'Somos una empresa enfocada en la gestión sostenible de metales industriales, integrando trazabilidad, eficiencia operativa y soluciones responsables para transformar residuos en valor.',
+    contact: {
+      phone: '+57 313 4292250',
+      email: 'compras@metalharvest.io',
+      whatsapp: '+57 313 4292250',
+      greeting:
+        'Hola Omar, deseo recibir información sobre los productos y soluciones de Harvest para mi empresa.',
     },
     socials: {
       web: 'https://metalharvest.io/',
