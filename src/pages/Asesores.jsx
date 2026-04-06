@@ -1,0 +1,99 @@
+import React from 'react'
+import './asesores.css'
+
+const asesores = [
+  {
+    nombre: 'Andres Felipe Barrera Rodriguez',
+    cargo: 'Lider de Proyectos',
+    foto: '/AndresBarrera.png',
+    whatsapp: '573028583784',
+    alias: 'Felipe',
+  },
+  {
+    nombre: 'Omar Melo',
+    cargo: 'Gerente de Compras',
+    foto: '/omar.webp',
+    whatsapp: '573134292250',
+  },
+  {
+    nombre: 'Karen Gonzalez',
+    cargo: 'Comercial',
+    foto: '/karen.png',
+    whatsapp: '573143002760',
+  },
+  {
+    nombre: 'Claudia Morales',
+    cargo: 'Ejecutiva Comercial',
+    foto: '/claudia.webp',
+    whatsapp: '573107811985',
+  },
+]
+
+function obtenerNombreMensaje(asesor) {
+  if (asesor.alias) return asesor.alias
+  const [nombre] = asesor.nombre.split(' ')
+  return nombre
+}
+
+function crearMensaje(asesor) {
+  const nombreMensaje = obtenerNombreMensaje(asesor)
+  return `Hola ${nombreMensaje}, escanee tu tarjeta con QR y me interesa algun negocio con tu empresa https://metalharvest.io`
+}
+
+function crearUrlWhatsApp(telefono, mensaje) {
+  const mensajeCodificado = encodeURIComponent(mensaje)
+  return `https://wa.me/${telefono}?text=${mensajeCodificado}`
+}
+
+export default function AsesoresPage() {
+  return (
+    <main className='asesores-page'>
+      <div className='asesores-shell'>
+        <header className='asesores-header' data-aos='fade-down'>
+          <div className='asesores-brand'>
+            <img src='/Harvest.webp' alt='Harvest' className='asesores-logo' />
+            <p className='asesores-pill'>Harvest</p>
+          </div>
+          <h1>Selecciona a tu asesor</h1>
+          <p>Haz click en una tarjeta para abrir WhatsApp.</p>
+        </header>
+
+        <section className='asesores-grid'>
+          {asesores.map((asesor, index) => {
+            const mensaje = crearMensaje(asesor)
+            const url = crearUrlWhatsApp(asesor.whatsapp, mensaje)
+
+            return (
+              <a
+                key={asesor.whatsapp}
+                href={url}
+                target='_blank'
+                rel='noreferrer'
+                className='asesor-card'
+                aria-label={`Contactar a ${asesor.nombre} por WhatsApp`}
+                data-aos='fade-up'
+                data-aos-delay={index * 80}
+              >
+                <div className='asesor-avatar-wrap'>
+                  <img
+                    src={asesor.foto}
+                    alt={asesor.nombre}
+                    className='asesor-avatar'
+                    loading='lazy'
+                  />
+                  <span className='asesor-avatar-ring asesor-avatar-ring--one' />
+                  <span className='asesor-avatar-ring asesor-avatar-ring--two' />
+                </div>
+                <div className='asesor-content'>
+                  <h2>{asesor.nombre}</h2>
+                  <p>{asesor.cargo}</p>
+                  <span>Abrir WhatsApp</span>
+                </div>
+              </a>
+            )
+          })}
+        </section>
+      </div>
+    </main>
+  )
+}
