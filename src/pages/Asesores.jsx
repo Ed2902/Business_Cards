@@ -2,30 +2,54 @@ import React from 'react'
 import './asesores.css'
 
 const asesores = [
+  // {
+  //   nombre: 'Andres Felipe Barrera Rodriguez',
+  //   cargo: 'Lider de Proyectos',
+  //   foto: '/AndresBarrera.png',
+  //   whatsapp: '573028583784',
+  //   alias: 'Felipe',
+  // },
+  // {
+  //   nombre: 'Omar Melo',
+  //   cargo: 'Gerente de Compras',
+  //   foto: '/omar.webp',
+  //   whatsapp: '573134292250',
+  // },
+  // {
+  //   nombre: 'Karen Gonzalez',
+  //   cargo: 'Comercial',
+  //   foto: '/karen.png',
+  //   whatsapp: '573143002760',
+  // },
+  // {
+  //   nombre: 'Claudia Morales',
+  //   cargo: 'Ejecutiva Comercial',
+  //   foto: '/claudia.webp',
+  //   whatsapp: '573107811985',
+  // },
   {
-    nombre: 'Andres Felipe Barrera Rodriguez',
-    cargo: 'Lider de Proyectos',
-    foto: '/AndresBarrera.png',
-    whatsapp: '573028583784',
-    alias: 'Felipe',
+    nombre: 'Paola Garzon',
+    cargo: 'Representación en Estados Unidos y Latinoamérica',
+    foto: '/Gina.png',
+    whatsapp: '573182123378',
   },
   {
-    nombre: 'Omar Melo',
-    cargo: 'Gerente de Compras',
-    foto: '/omar.webp',
-    whatsapp: '573134292250',
+    nombre: 'Cristina Avendaño',
+    cargo: 'Representación en Estados Unidos y Latinoamérica',
+    foto: '/avatar2.webp',
+    whatsapp: '573182123378',
   },
   {
-    nombre: 'Karen Gonzalez',
-    cargo: 'Comercial',
-    foto: '/karen.png',
-    whatsapp: '573143002760',
+    nombre: 'Juan Avendaño',
+    cargo: 'Representación en Estados Unidos y Latinoamérica',
+    foto: '/avatar1.webp',
+    whatsapp: '573182123378',
   },
   {
-    nombre: 'Claudia Morales',
-    cargo: 'Ejecutiva Comercial',
-    foto: '/claudia.webp',
-    whatsapp: '573107811985',
+    nombre: 'Giancarlo Avendaño',
+    cargo: 'Representación en Estados Unidos y Latinoamérica',
+    foto: '/Gian.webp',
+    whatsapp: '17866610046',
   },
 ]
 
@@ -41,6 +65,8 @@ function crearMensaje(asesor) {
 }
 
 function crearUrlWhatsApp(telefono, mensaje) {
+  if (!telefono) return ''
+
   const mensajeCodificado = encodeURIComponent(mensaje)
   return `https://wa.me/${telefono}?text=${mensajeCodificado}`
 }
@@ -65,8 +91,8 @@ export default function AsesoresPage() {
 
             return (
               <a
-                key={asesor.whatsapp}
-                href={url}
+                key={`${asesor.whatsapp || asesor.nombre}-${index}`}
+                href={url || undefined}
                 target='_blank'
                 rel='noreferrer'
                 className='asesor-card'
@@ -74,16 +100,18 @@ export default function AsesoresPage() {
                 data-aos='fade-up'
                 data-aos-delay={index * 80}
               >
-                <div className='asesor-avatar-wrap'>
-                  <img
-                    src={asesor.foto}
-                    alt={asesor.nombre}
-                    className='asesor-avatar'
-                    loading='lazy'
-                  />
-                  <span className='asesor-avatar-ring asesor-avatar-ring--one' />
-                  <span className='asesor-avatar-ring asesor-avatar-ring--two' />
-                </div>
+                {asesor.foto && (
+                  <div className='asesor-avatar-wrap'>
+                    <img
+                      src={asesor.foto}
+                      alt={asesor.nombre}
+                      className='asesor-avatar'
+                      loading='lazy'
+                    />
+                    <span className='asesor-avatar-ring asesor-avatar-ring--one' />
+                    <span className='asesor-avatar-ring asesor-avatar-ring--two' />
+                  </div>
+                )}
                 <div className='asesor-content'>
                   <h2>{asesor.nombre}</h2>
                   <p>{asesor.cargo}</p>
