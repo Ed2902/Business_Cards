@@ -37,13 +37,13 @@ const asesores = [
     nombre: 'Cristina Avendaño',
     cargo: 'Representación en Estados Unidos y Latinoamérica',
     foto: '/avatar2.webp',
-    whatsapp: '573182123378',
+    whatsapp: '17864236363',
   },
   {
     nombre: 'Juan Avendaño',
     cargo: 'Representación en Estados Unidos y Latinoamérica',
     foto: '/avatar1.webp',
-    whatsapp: '573182123378',
+    whatsapp: '17862165515',
   },
   {
     nombre: 'Giancarlo Avendaño',
