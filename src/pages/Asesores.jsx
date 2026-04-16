@@ -1,36 +1,11 @@
 import React from 'react'
 import './asesores.css'
 
-const asesores = [
-  // {
-  //   nombre: 'Andres Felipe Barrera Rodriguez',
-  //   cargo: 'Lider de Proyectos',
-  //   foto: '/AndresBarrera.png',
-  //   whatsapp: '573028583784',
-  //   alias: 'Felipe',
-  // },
-  // {
-  //   nombre: 'Omar Melo',
-  //   cargo: 'Gerente de Compras',
-  //   foto: '/omar.webp',
-  //   whatsapp: '573134292250',
-  // },
-  // {
-  //   nombre: 'Karen Gonzalez',
-  //   cargo: 'Comercial',
-  //   foto: '/karen.png',
-  //   whatsapp: '573143002760',
-  // },
-  // {
-  //   nombre: 'Claudia Morales',
-  //   cargo: 'Ejecutiva Comercial',
-  //   foto: '/claudia.webp',
-  //   whatsapp: '573107811985',
-  // },
+const asesoresEstadosUnidosLatam = [
   {
     nombre: 'Paola Garzon',
     cargo: 'Representación en Estados Unidos y Latinoamérica',
-    foto: '/Gina.png',
+    foto: '/avatar2.webp',
     whatsapp: '573182123378',
   },
   {
@@ -50,6 +25,45 @@ const asesores = [
     cargo: 'Representación en Estados Unidos y Latinoamérica',
     foto: '/Gian.webp',
     whatsapp: '17866610046',
+  },
+]
+
+const asesoresColombia = [
+  {
+    nombre: 'Andres Felipe Barrera Rodriguez',
+    cargo: 'Representación en Colombia',
+    foto: '/AndresBarrera.png',
+    whatsapp: '573028583784',
+    alias: 'Felipe',
+  },
+  {
+    nombre: 'Omar Melo',
+    cargo: 'Representación en Colombia',
+    foto: '/omar.webp',
+    whatsapp: '573134292250',
+  },
+  {
+    nombre: 'Karen Gonzalez',
+    cargo: 'Representación en Colombia',
+    foto: '/karen.png',
+    whatsapp: '573143002760',
+  },
+  {
+    nombre: 'Claudia Morales',
+    cargo: 'Representación en Colombia',
+    foto: '/claudia.webp',
+    whatsapp: '573107811985',
+  },
+]
+
+const seccionesAsesores = [
+  {
+    titulo: 'Representación en Estados Unidos y Latinoamérica',
+    asesores: asesoresEstadosUnidosLatam,
+  },
+  {
+    titulo: 'Representación en Colombia',
+    asesores: asesoresColombia,
   },
 ]
 
@@ -84,43 +98,49 @@ export default function AsesoresPage() {
           <p>Haz click en una tarjeta para abrir WhatsApp.</p>
         </header>
 
-        <section className='asesores-grid'>
-          {asesores.map((asesor, index) => {
-            const mensaje = crearMensaje(asesor)
-            const url = crearUrlWhatsApp(asesor.whatsapp, mensaje)
+        {seccionesAsesores.map((seccion, seccionIndex) => (
+          <section className='asesores-section' key={seccion.titulo}>
+            <h2 className='asesores-section-title'>{seccion.titulo}</h2>
 
-            return (
-              <a
-                key={`${asesor.whatsapp || asesor.nombre}-${index}`}
-                href={url || undefined}
-                target='_blank'
-                rel='noreferrer'
-                className='asesor-card'
-                aria-label={`Contactar a ${asesor.nombre} por WhatsApp`}
-                data-aos='fade-up'
-                data-aos-delay={index * 80}
-              >
-                {asesor.foto && (
-                  <div className='asesor-avatar-wrap'>
-                    <img
-                      src={asesor.foto}
-                      alt={asesor.nombre}
-                      className='asesor-avatar'
-                      loading='lazy'
-                    />
-                    <span className='asesor-avatar-ring asesor-avatar-ring--one' />
-                    <span className='asesor-avatar-ring asesor-avatar-ring--two' />
-                  </div>
-                )}
-                <div className='asesor-content'>
-                  <h2>{asesor.nombre}</h2>
-                  <p>{asesor.cargo}</p>
-                  <span>Abrir WhatsApp</span>
-                </div>
-              </a>
-            )
-          })}
-        </section>
+            <div className='asesores-grid'>
+              {seccion.asesores.map((asesor, index) => {
+                const mensaje = crearMensaje(asesor)
+                const url = crearUrlWhatsApp(asesor.whatsapp, mensaje)
+
+                return (
+                  <a
+                    key={`${asesor.whatsapp || asesor.nombre}-${index}`}
+                    href={url || undefined}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='asesor-card'
+                    aria-label={`Contactar a ${asesor.nombre} por WhatsApp`}
+                    data-aos='fade-up'
+                    data-aos-delay={(seccionIndex * 4 + index) * 80}
+                  >
+                    {asesor.foto && (
+                      <div className='asesor-avatar-wrap'>
+                        <img
+                          src={asesor.foto}
+                          alt={asesor.nombre}
+                          className='asesor-avatar'
+                          loading='lazy'
+                        />
+                        <span className='asesor-avatar-ring asesor-avatar-ring--one' />
+                        <span className='asesor-avatar-ring asesor-avatar-ring--two' />
+                      </div>
+                    )}
+                    <div className='asesor-content'>
+                      <h2>{asesor.nombre}</h2>
+                      <p>{asesor.cargo}</p>
+                      <span>Abrir WhatsApp</span>
+                    </div>
+                  </a>
+                )
+              })}
+            </div>
+          </section>
+        ))}
       </div>
     </main>
   )
