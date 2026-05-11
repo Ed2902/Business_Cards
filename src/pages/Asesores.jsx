@@ -9,12 +9,6 @@ const asesoresEstadosUnidosLatam = [
     whatsapp: '573182123378',
   },
   {
-    nombre: 'Caroll Mishel Huertas Rojas',
-    cargo: 'Líder de Calidad',
-    foto: '/Caroll.png',
-    whatsapp: '573504586346',
-  },
-  {
     nombre: 'Cristina Avendaño',
     cargo: 'Representación en Estados Unidos y Latinoamérica',
     foto: '/avatar2.webp',
@@ -35,6 +29,12 @@ const asesoresEstadosUnidosLatam = [
 ]
 
 const asesoresColombia = [
+  {
+    nombre: 'Caroll Mishel Huertas Rojas',
+    cargo: 'Líder de Calidad',
+    foto: '/Caroll.png',
+    whatsapp: '573504586346',
+  },
   {
     nombre: 'Andres Felipe Barrera Rodriguez',
     cargo: 'Representación en Colombia',
